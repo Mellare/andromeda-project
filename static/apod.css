@@ -1,0 +1,12 @@
+body{
+    font-family: 'Sora', monospace;
+    color: white;
+}
+.container-title{
+    background-color: black;
+}
+.container-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
