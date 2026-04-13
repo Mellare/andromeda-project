@@ -6,15 +6,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{url_for('static', filename='apod.css')}}">
-    <title>Astronomy Picture Of Day</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+    <title>Andromeda Project</title>
 </head>
 <body>
     <div class="container-title">
-    <h1>Astronomy Picture Of Day</h1>
+        <h1>Bem-vindo ao Andromeda Project</h1>
     </div>
-    <div class="container-img">
-        <img src="{{img_apod}}">
-    </div>
+        <nav class="container-navbar">
+            <button id="nav-btn-apod" onclick=window.location.href="{{url_for('apod')}}">Imagens do universo</button>
+            <button id="nav-btn-insight">O clima em Marte</button>
+        </nav>
 </body>
 </html>

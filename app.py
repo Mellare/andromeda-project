@@ -7,11 +7,14 @@ app = Flask(__name__)
 
 load_dotenv()
 api_key = os.getenv('API_KEY')
-data = requests.get(f"https://api.nasa.gov/planetary/apod?api_key={api_key}")
-formatedData = data.json()
-print()
-print(f"URL do dia: {formatedData['url']}\nInformações: {formatedData['explanation']}")
+
+@app.route("/index")
+def index():
+    return render_template("index.html")
 
 @app.route("/apod")
 def apod():
-    return render_template("apod.html")
+    data = requests.get(f"https://api.nasa.gov/planetary/apod?api_key={api_key}")
+    formatedData = data.json()
+    url_img = formatedData['url']
+    return render_template("apod.html", img_apod = url_img)

@@ -1,0 +1,41 @@
+body{
+    font-family: 'Sora', monospace;
+    margin: 0;
+    background-image: linear-gradient(180deg, rgba(0,0,0), rgb(17, 19, 139), rgba(0,0,0));
+    background-repeat: no-repeat;
+}
+
+.container-title{
+    color: white;
+    height: 90px;
+}
+
+.container-navbar{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: flex-start;
+    align-items: center;
+    height: 110px;
+    padding: 10px;
+}
+
+#nav-btn-apod{
+    border-radius: 6px;
+    border: solid 1px;
+    background-color: white;
+    color:black;
+    cursor: pointer;
+    height: 30px;
+    font-family: 'Sora', monospace;
+}
+
+#nav-btn-insight{
+    border-radius: 6px;
+    border: solid 1px;
+    background-color: white;
+    color:black;
+    cursor: pointer;
+    height: 30px;
+    font-family: 'Sora', monospace;
+}
