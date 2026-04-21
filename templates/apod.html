@@ -6,15 +6,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{url_for('static', filename='apod.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/apod.css')}}">
     <title>Astronomy Picture Of Day</title>
 </head>
 <body>
     <div class="container-title">
-    <h1>Astronomy Picture Of Day</h1>
+    <h1 id="title-caption">Astronomy Picture Of Day</h1>
+    <button type="button" class="btn btn-danger" onclick=window.location.href="{{url_for('index')}}">Voltar</button>
     </div>
     <div class="container-img">
-        <img src="{{img_apod}}">
+        <img id="img-apod"src="{{img_apod}}">
     </div>
+    <br>
+    <br>
+    <div class="container-explanation">
+        <h2>Para saber mais:</h2>
+        <br>
+        <p>{{txt_apod}}</p>
+    </div>
+<script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>

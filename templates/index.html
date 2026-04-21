@@ -6,16 +6,67 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
     <title>Andromeda Project</title>
 </head>
 <body>
+
+<main>
     <div class="container-title">
         <h1>Bem-vindo ao Andromeda Project</h1>
     </div>
-        <nav class="container-navbar">
-            <button id="nav-btn-apod" onclick=window.location.href="{{url_for('apod')}}">Imagens do universo</button>
-            <button id="nav-btn-insight">O clima em Marte</button>
-        </nav>
+    
+    <hr>
+
+    <nav class="navbar navbar-expand-lg bg-border">
+        <div class="container-fluid">
+            <img src="{{url_for('static', filename='images/planet-navbar.svg')}}">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+
+               <div class="nav-links">
+                <a class="nav-link active" href="{{url_for('apod')}}">Explore o universo</a>
+               </div>
+               <div class="nav-links">
+                <a class="nav-link active" href="#">O clima em Marte</a>
+               </div>
+               <div class="nav-links">
+                <a class="nav-link active" href="#">Mapeamento de objetos espaciais</a>
+               </div>
+
+            </div>
+            </div>
+        </div>
+    </nav>
+    <hr>
+</main>
+
+    <footer>
+    <div id="footer-github">
+        <img class="tech-img" src="{{url_for('static', filename='images/github.svg')}}">
+        <p>Desenvolvido por:</p>
+        <a class="nav-link active" href="#">Mellare</a>
+    </div>
+    <div id="footer-nasa">
+        <img class="tech-img" src="{{url_for('static', filename='images/earth.svg')}}">
+        <p>NASA API:</p>
+        <a class="nav-link active" href="#">Nasa</a>
+    </div>
+    <div id="footer-tech-stack">
+        <img class="tech-img" src="{{url_for('static', filename='images/html5.svg')}}">
+        <img class="tech-img" src="{{url_for('static', filename='images/css.svg')}}">
+        <img class="tech-img" src="{{url_for('static', filename='images/bootstrap.svg')}}">
+        <img class="tech-img" src="{{url_for('static', filename='images/javascript.svg')}}">
+        <img class="tech-img" src="{{url_for('static', filename='images/python.svg')}}">
+        <img class="tech-img" src="{{url_for('static', filename='images/flask.svg')}}">
+    </div>
+    <p id="tech-license">*Os logotipos de tecnologias são marcas registradas de seus respectivos proprietários.</p>    
+    </footer>
+
+<script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>
