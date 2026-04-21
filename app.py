@@ -17,4 +17,5 @@ def apod():
     data = requests.get(f"https://api.nasa.gov/planetary/apod?api_key={api_key}")
     formatedData = data.json()
     url_img = formatedData['url']
-    return render_template("apod.html", img_apod = url_img)
+    txt_img = formatedData['explanation']
+    return render_template("apod.html", img_apod = url_img, txt_apod = txt_img)
