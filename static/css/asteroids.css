@@ -1,0 +1,9 @@
+body{
+    font-family: 'Sora', monospace;
+    background-color: rgb(222, 231, 231);
+}
+
+.container-data{
+    background-color: white;
+    box-shadow: 0 0 10px 5px rgba(173, 173, 173, 0.762);
+}
