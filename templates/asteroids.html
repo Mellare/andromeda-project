@@ -18,10 +18,14 @@
 
 <body>
 
+<header>
     <div class="container-title">
         <h1>Mapeamento de objetos espaciais</h1>
         <button id="btn-home" type="button" class="btn btn-outline-primary" onclick=window.location.href="{{url_for('index')}}">Home</button>
     </div>
+</header>
+
+<main>
         <h2>A API que monitora os objetos espaciais é a Asteroids NeoWS, a cada dia os dados são atualizados com informações de objetos passando próximos da Terra.</h2>
     <div class="container-data">
         <table>
@@ -39,6 +43,8 @@
         {% endfor %}
         </table>
     </div>
+</main>
+
 </body>
 
 </html>

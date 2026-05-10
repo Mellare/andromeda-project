@@ -19,10 +19,15 @@
 </head>
 
 <body>
+
+<header>
     <div class="container-title">
         <h1 id="title-caption">Astronomy Picture Of Day</h1>
         <button id="btn-home" type="button" class="btn btn-outline-primary" onclick=window.location.href="{{url_for('index')}}">Home</button>
     </div>
+</header>
+
+<main>
         <h2>A API APOD retorna uma imagem diretamente da NASA a cada dia e com uma descrição detalhada feita por um astrônomo!</h2>
     <div class="container-img">
         <img id="img-apod" src="{{img_apod}}">
@@ -34,7 +39,9 @@
         <br>
         <p>{{txt_apod}}</p>
     </div>
+</main>
 <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+
 </body>
 
 </html>
