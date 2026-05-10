@@ -9,17 +9,22 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
     <title>Andromeda Project</title>
+
+    <style>
+        body{
+            background-image: url("{{url_for('static', filename='images/cosmic-bg.png')}}");
+        }
+    </style>
+    
 </head>
+
 <body>
 
 <main>
     <div class="container-title">
         <h1>Bem-vindo ao Andromeda Project</h1>
     </div>
-    
-    <hr>
-
-    <nav class="navbar navbar-expand-lg bg-border">
+    <nav class="navbar navbar-expand-lg bg-body">
         <div class="container-fluid">
             <img src="{{url_for('static', filename='images/planet-navbar.svg')}}">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,22 +32,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-
-               <div class="nav-links">
-                <a class="nav-link active" href="{{url_for('apod')}}">Explore o universo</a>
-               </div>
-               <div class="nav-links">
-                <a class="nav-link active" href="#">O clima em Marte</a>
-               </div>
-               <div class="nav-links">
-                <a class="nav-link active" href="#">Mapeamento de objetos espaciais</a>
-               </div>
-
+            <div class="nav-links">
+            <a class="nav-link active" href="{{url_for('apod')}}">Explore o universo</a>
+            </div>
+            <div class="nav-links">
+            <a class="nav-link active" href="{{url_for('asteroids')}}">Mapeamento de objetos espaciais</a>
+            </div>
             </div>
             </div>
         </div>
     </nav>
-    <hr>
 </main>
 
     <footer>
@@ -69,4 +68,5 @@
 
 <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
 </body>
+
 </html>

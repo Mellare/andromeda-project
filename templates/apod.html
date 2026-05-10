@@ -9,14 +9,23 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/apod.css')}}">
     <title>Astronomy Picture Of Day</title>
+
+    <style>
+        body{
+            background-image: url("{{url_for('static', filename='images/cosmic-bg.png')}}");
+        }
+    </style>
+    
 </head>
+
 <body>
     <div class="container-title">
-    <h1 id="title-caption">Astronomy Picture Of Day</h1>
-    <button type="button" class="btn btn-danger" onclick=window.location.href="{{url_for('index')}}">Voltar</button>
+        <h1 id="title-caption">Astronomy Picture Of Day</h1>
+        <button id="btn-home" type="button" class="btn btn-outline-primary" onclick=window.location.href="{{url_for('index')}}">Home</button>
     </div>
+        <h2>A API APOD retorna uma imagem diretamente da NASA a cada dia e com uma descrição detalhada feita por um astrônomo!</h2>
     <div class="container-img">
-        <img id="img-apod"src="{{img_apod}}">
+        <img id="img-apod" src="{{img_apod}}">
     </div>
     <br>
     <br>
@@ -27,4 +36,5 @@
     </div>
 <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
 </body>
+
 </html>

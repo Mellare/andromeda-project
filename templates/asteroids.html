@@ -7,20 +7,30 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/asteroids.css')}}">
     <title>Space Map</title>
+
+    <style>
+        body{
+            background-image: url("{{url_for('static', filename='images/cosmic-bg.png')}}");
+        }
+    </style>
+    
 </head>
+
 <body>
-    <h1>Mapeamento de objetos espaciais</h1>
 
+    <div class="container-title">
+        <h1>Mapeamento de objetos espaciais</h1>
+        <button id="btn-home" type="button" class="btn btn-outline-primary" onclick=window.location.href="{{url_for('index')}}">Home</button>
+    </div>
+        <h2>A API que monitora os objetos espaciais é a Asteroids NeoWS, a cada dia os dados são atualizados com informações de objetos passando próximos da Terra.</h2>
     <div class="container-data">
-        <h2>Quantidade de corpos celestes: {{count}}</h2>
-
         <table>
-        {% for name, diameter, approach_date in data %}
             <tr>
                 <th>Nome</th>
                 <th>Diâmetro</th>
                 <th>Data de passagem</th>
             </tr>
+        {% for name, diameter, approach_date in data %}
             <tr>
                 <td>{{name}}</td>
                 <td>{{diameter}}</td>
@@ -29,6 +39,6 @@
         {% endfor %}
         </table>
     </div>
-
 </body>
+
 </html>
