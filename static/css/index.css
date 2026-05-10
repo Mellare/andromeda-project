@@ -4,6 +4,8 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 main{
@@ -11,7 +13,8 @@ main{
 }
 
 .container-title{
-    background-image: linear-gradient(to left, rgba(0,0,0), rgb(177,76,244), rgb(226, 220, 220));
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.082), rgba(177, 76, 244, 0.738), rgba(0, 0, 0, 0.082));
+    backdrop-filter: blur(2px);
     background-repeat: no-repeat;
     color: white;
     height: 90px;
@@ -19,8 +22,10 @@ main{
     padding: 10px;
 }
 
+h1{
+    font-weight: bold;
+}
 .navbar-nav{
-    display: flex;
     gap: 30px;
 }
 
@@ -39,8 +44,9 @@ main{
 }
 
 footer{
-    background-color: rgba(220, 214, 214, 0.901);
-    color: rgb(0,0,0);
+    background-color: rgba(255, 255, 255, 0.069);
+    backdrop-filter: blur(1px);
+    color: rgb(255, 255, 255);
     padding: 10px;
 }
 

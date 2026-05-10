@@ -1,9 +1,43 @@
 body{
     font-family: 'Sora', monospace;
-    background-color: rgb(222, 231, 231);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+.container-title{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.088);
+    height: 100px;
+    padding: 6px;
+    top: 0;
+    backdrop-filter: blur(2px);
+    padding: 30px;
+}
+
+#btn-home{
+    width: 80px;
+    height: 40px;
+}
+
+h1, h2, caption{
+    color: white;
+    font-weight: bold;
+}
 .container-data{
-    background-color: white;
-    box-shadow: 0 0 10px 5px rgba(173, 173, 173, 0.762);
+    box-shadow: 0 0 10px 7px rgba(246, 243, 243, 0.762);
+    margin-top: 10%;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    border: solid 1px;
+}
+
+th, td{
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    border: solid 1px;
 }

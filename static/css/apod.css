@@ -1,37 +1,29 @@
 body{
     font-family: 'Sora', monospace;
-    color: black;
-    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container-title{
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
-    background-color: black;
-    color: white;
-    height: 60px;
+    background-color: rgba(255, 255, 255, 0.088);
+    height: 100px;
     padding: 6px;
-    position: sticky;
-    z-index: 1000;
     top: 0;
+    backdrop-filter: blur(2px);
+    padding: 30px;
 }
 
-#title-caption{
-    animation-name: title-caption-animation;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+#btn-home{
+    width: 80px;
+    height: 40px;
 }
 
-@keyframes title-caption-animation{
-    0%{
-        color: white;
-    }
-    25%{
-        color:rgb(255, 251, 136);
-    }
-    50%{
-        color: rgba(248, 191, 46, 0.951);
-    }
+h1, h2{
+    color: white;
+    font-weight: bold;
 }
 
 .container-img{
@@ -43,10 +35,9 @@ body{
 
 #img-apod{
     border-radius: 8px;
-    border: 1px solid;
-    padding: 4px;
     max-width: 100%;
     height: auto;
+    box-shadow: 0 0 10px 7px rgba(246, 243, 243, 0.762);
 }
 
 .container-explanation{
