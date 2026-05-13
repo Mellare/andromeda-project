@@ -8,7 +8,7 @@ body{
     background-size: cover;
 }
 
-main{
+header{
     flex: 1;
 }
 
@@ -48,32 +48,16 @@ footer{
     backdrop-filter: blur(1px);
     color: rgb(255, 255, 255);
     padding: 10px;
+    font-size: small;
 }
 
-#footer-github{
+.row-icons{
     display: flex;
     flex-direction: row;
     gap: 30px;
-}
-
-#footer-nasa{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-}
-
-#footer-tech-stack{
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    margin-top: 20px;
 }
 
 .tech-img{
     height: 25px;
     width: 25px;
-}
-
-#tech-license{
-    font-size: small;
 }

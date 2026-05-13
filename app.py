@@ -18,12 +18,13 @@ def index():
 '''Apod API'''
 data = requests.get(f"https://api.nasa.gov/planetary/apod?api_key={api_key}")
 formatedData = data.json()
-url_img = formatedData['url']
-txt_img = formatedData['explanation']
+url_apod = formatedData['url']
+txt_apod = formatedData['explanation']
+media_type_apod = formatedData['media_type']
 
 @app.route("/apod")
 def apod():
-    return render_template("apod.html", img_apod = url_img, txt_apod = txt_img)
+    return render_template("apod.html", url = url_apod, description = txt_apod, media_type = media_type_apod)
 
 '''Asteroids NeoWs API'''
 data = requests.get(f"https://api.nasa.gov/neo/rest/v1/feed?start_date={datetime.date.today()}&end_date={datetime.date.today()}&api_key={api_key}")
