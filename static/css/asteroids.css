@@ -26,7 +26,7 @@ h1, h2, caption{
     font-weight: bold;
 }
 .container-data{
-    box-shadow: 0 0 10px 7px rgba(246, 243, 243, 0.762);
+    box-shadow: 0 0 10px 4px rgba(246, 243, 243, 0.762);
     margin-top: 10%;
 }
 

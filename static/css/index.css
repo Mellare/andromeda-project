@@ -8,10 +8,6 @@ body{
     background-size: cover;
 }
 
-header{
-    flex: 1;
-}
-
 .container-title{
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.082), rgba(177, 76, 244, 0.738), rgba(0, 0, 0, 0.082));
     backdrop-filter: blur(2px);
@@ -25,6 +21,7 @@ header{
 h1{
     font-weight: bold;
 }
+
 .navbar-nav{
     gap: 30px;
 }
@@ -41,6 +38,24 @@ h1{
     to{
         scale: 1.2;
     }
+}
+
+main{
+    flex: 1;
+    background-color: rgba(216, 222, 222, 0.206);
+    color: white;
+}
+
+.container-moon{
+    display: flex;
+    flex-direction: row;
+}
+
+#moon-phase{
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 8px 5px rgba(246, 243, 243, 0.762);
 }
 
 footer{

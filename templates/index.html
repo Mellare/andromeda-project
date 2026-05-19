@@ -44,16 +44,23 @@
     </nav>
 </header>
 
+<main>
+    <div class="container-moon">
+        <h2>Veja em que fase a lua está hoje:</h2>
+        <img id="moon-phase" src="{{svg_moon}}">
+    </div>
+</main>
+
 <footer>
     <div class="row-icons">
         <img class="tech-img" src="{{url_for('static', filename='images/github.svg')}}">
         <p>Desenvolvido por:</p>
-        <a class="nav-link active" href="#">Mellare</a>
+        <a class="nav-link active" href="https://github.com/Mellare">Mellare</a>
     </div>
     <div class="row-icons">
         <img class="tech-img" src="{{url_for('static', filename='images/earth.svg')}}">
         <p>NASA API:</p>
-        <a class="nav-link active" href="#">Nasa</a>
+        <a class="nav-link active" href="https://api.nasa.gov/">Nasa</a>
     </div>
     <div class="row-icons">
         <img class="tech-img" src="{{url_for('static', filename='images/html5.svg')}}">
