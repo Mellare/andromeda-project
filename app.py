@@ -29,8 +29,8 @@ moon_params = {
         "textColor": "white"
     },
     "observer": {
-        "latitude": 6.56774,
-        "longitude": 79.88956,
+        "latitude": -23.5489,
+        "longitude": -46.6388,
         "date": f"{datetime.date.today()}"
     },
     "view": {
@@ -44,7 +44,7 @@ formated_data_moon = formated_data['data']['imageUrl']
 
 
 '''Endpoint para a Home Page'''
-@app.route("/index")
+@app.route("/index", methods=['GET', 'POST'])
 def index():
     return render_template("index.html", svg_moon = formated_data_moon)
 
@@ -61,7 +61,7 @@ media_type_apod = formatedData['media_type']
 
 
 '''Endpoint para a imagem da APOD API'''
-@app.route("/apod")
+@app.route("/apod", methods=['GET'])
 def apod():
     return render_template("apod.html", url = url_apod, description = txt_apod, media_type = media_type_apod)
 
@@ -71,9 +71,9 @@ def apod():
 
 '''Integração com a Asteroids NeoWS API NASA'''
 data = requests.get(f"https://api.nasa.gov/neo/rest/v1/feed?start_date={datetime.date.today()}&end_date={datetime.date.today()}&api_key={api_key}")
-formatedData = data.json()
-object_count = formatedData['element_count']
-object_data = formatedData['near_earth_objects'][f"{datetime.date.today()}"]
+formated_data = data.json()
+object_count = formated_data['element_count']
+object_data = formated_data['near_earth_objects'][f"{datetime.date.today()}"]
 list_names = []
 list_diameter = []
 list_approach_date_full = []
@@ -86,6 +86,6 @@ all_data = list(zip(list_names, list_diameter, list_approach_date_full))
 
 
 '''Endpoint para os dados da tabela de asteroides'''
-@app.route("/asteroids")
+@app.route("/asteroids", methods=['GET'])
 def asteroids():
     return render_template("asteroids.html", count = object_count, data = all_data)

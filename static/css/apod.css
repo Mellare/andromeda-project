@@ -35,8 +35,6 @@ h1, h2{
 
 #img-apod{
     border-radius: 8px;
-    max-width: 100%;
-    height: auto;
     box-shadow: 0 0 10px 7px rgba(246, 243, 243, 0.762);
 }
 

@@ -18,7 +18,7 @@ body{
     padding: 10px;
 }
 
-h1{
+h1, h2{
     font-weight: bold;
 }
 
@@ -42,20 +42,12 @@ h1{
 
 main{
     flex: 1;
-    background-color: rgba(216, 222, 222, 0.206);
+    background-color: rgb(0, 0, 0);
     color: white;
-}
-
-.container-moon{
     display: flex;
-    flex-direction: row;
-}
-
-#moon-phase{
-    border-radius: 8px;
-    max-width: 100%;
-    height: auto;
-    box-shadow: 0 0 8px 5px rgba(246, 243, 243, 0.762);
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
 }
 
 footer{
@@ -72,7 +64,7 @@ footer{
     gap: 30px;
 }
 
-.tech-img{
+.tech-icons{
     height: 25px;
     width: 25px;
 }

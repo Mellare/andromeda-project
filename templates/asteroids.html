@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,41 +10,43 @@
     <title>Space Map</title>
 
     <style>
-        body{
+        body {
             background-image: url("{{url_for('static', filename='images/cosmic-bg.png')}}");
         }
     </style>
-    
+
 </head>
 
 <body>
 
-<header>
-    <div class="container-title">
-        <h1>Mapeamento de objetos espaciais</h1>
-        <button id="btn-home" type="button" class="btn btn-outline-primary" onclick=window.location.href="{{url_for('index')}}">Home</button>
-    </div>
-</header>
+    <header>
+        <div class="container-title">
+            <h1>Mapeamento de objetos espaciais</h1>
+            <button id="btn-home" type="button" class="btn btn-outline-primary"
+                onclick=window.location.href="{{url_for('index')}}">Home</button>
+        </div>
+    </header>
 
-<main>
-        <h2>A API que monitora os objetos espaciais é a Asteroids NeoWS, a cada dia os dados são atualizados com informações de objetos passando próximos da Terra.</h2>
-    <div class="container-data">
-        <table>
-            <tr>
-                <th>Nome</th>
-                <th>Diâmetro</th>
-                <th>Data de passagem</th>
-            </tr>
-        {% for name, diameter, approach_date in data %}
-            <tr>
-                <td>{{name}}</td>
-                <td>{{diameter}}</td>
-                <td>{{approach_date}}</td>
-            </tr>
-        {% endfor %}
-        </table>
-    </div>
-</main>
+    <main>
+        <h2>A API que monitora os objetos espaciais é a Asteroids NeoWS, a cada dia os dados são atualizados com
+            informações de objetos passando próximos da Terra &#127776;</h2>
+        <div class="container-data">
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Diâmetro</th>
+                    <th>Data de passagem</th>
+                </tr>
+                {% for name, diameter, approach_date in data %}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{diameter}}</td>
+                    <td>{{approach_date}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </main>
 
 </body>
 

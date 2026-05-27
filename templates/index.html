@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,69 +12,76 @@
     <title>Andromeda Project</title>
 
     <style>
-        body{
+        body {
             background-image: url("{{url_for('static', filename='images/cosmic-bg.png')}}");
         }
     </style>
-    
+
 </head>
 
 <body>
 
-<header>
-    <div class="container-title">
-        <h1>Bem-vindo ao Andromeda Project</h1>
-    </div>
-    <nav class="navbar navbar-expand-lg bg-body">
-        <div class="container-fluid">
-            <img src="{{url_for('static', filename='images/planet-navbar.svg')}}">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-            <div class="nav-links">
-            <a class="nav-link active" href="{{url_for('apod')}}">Explore o universo</a>
+    <header>
+        <div class="container-title">
+            <h1>Bem-vindo ao Andromeda Project</h1>
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body">
+            <div class="container-fluid">
+                <img src="{{url_for('static', filename='images/planet-navbar.svg')}}">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <div class="nav-links">
+                            <a class="nav-link active" href="{{url_for('apod')}}">Explore o universo</a>
+                        </div>
+                        <div class="nav-links">
+                            <a class="nav-link active" href="{{url_for('asteroids')}}">Mapeamento de objetos
+                                espaciais</a>
+                        </div>
+                        <div class="nav-links">
+                            <a class="nav-link active" href="https://api.nasa.gov/">NASA API</a>
+                        </div>
+                        <div class="nav-links">
+                            <a class="nav-link active" href="https://docs.astronomyapi.com/">Astronomy API</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="nav-links">
-            <a class="nav-link active" href="{{url_for('asteroids')}}">Mapeamento de objetos espaciais</a>
-            </div>
-            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Veja a fase da lua hoje &#127772;</h2>
+        <div class="card" style="width: 40rem;">
+            <img src="{{svg_moon}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-text">Exibindo a fase da lua na latitude: -23.5489 e longitude: -46.6388</p>
             </div>
         </div>
-    </nav>
-</header>
+    </main>
 
-<main>
-    <div class="container-moon">
-        <h2>Veja em que fase a lua está hoje:</h2>
-        <img id="moon-phase" src="{{svg_moon}}">
-    </div>
-</main>
+    <footer>
+        <div class="row-icons">
+            <img class="tech-icons" src="{{url_for('static', filename='images/github.svg')}}">
+            <p>Desenvolvido por:</p>
+            <a class="nav-link active" href="https://github.com/Mellare">Mellare</a>
+        </div>
+        <div class="row-icons">
+            <img class="tech-icons" src="{{url_for('static', filename='images/html5.svg')}}">
+            <img class="tech-icons" src="{{url_for('static', filename='images/css.svg')}}">
+            <img class="tech-icons" src="{{url_for('static', filename='images/bootstrap.svg')}}">
+            <img class="tech-icons" src="{{url_for('static', filename='images/javascript.svg')}}">
+            <img class="tech-icons" src="{{url_for('static', filename='images/python.svg')}}">
+            <img class="tech-icons" src="{{url_for('static', filename='images/flask.svg')}}">
+        </div>
+        <p>*Os logotipos de tecnologias são marcas registradas de seus respectivos proprietários.</p>
+    </footer>
 
-<footer>
-    <div class="row-icons">
-        <img class="tech-img" src="{{url_for('static', filename='images/github.svg')}}">
-        <p>Desenvolvido por:</p>
-        <a class="nav-link active" href="https://github.com/Mellare">Mellare</a>
-    </div>
-    <div class="row-icons">
-        <img class="tech-img" src="{{url_for('static', filename='images/earth.svg')}}">
-        <p>NASA API:</p>
-        <a class="nav-link active" href="https://api.nasa.gov/">Nasa</a>
-    </div>
-    <div class="row-icons">
-        <img class="tech-img" src="{{url_for('static', filename='images/html5.svg')}}">
-        <img class="tech-img" src="{{url_for('static', filename='images/css.svg')}}">
-        <img class="tech-img" src="{{url_for('static', filename='images/bootstrap.svg')}}">
-        <img class="tech-img" src="{{url_for('static', filename='images/javascript.svg')}}">
-        <img class="tech-img" src="{{url_for('static', filename='images/python.svg')}}">
-        <img class="tech-img" src="{{url_for('static', filename='images/flask.svg')}}">
-    </div>
-    <p>*Os logotipos de tecnologias são marcas registradas de seus respectivos proprietários.</p>    
-</footer>
-
-<script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
 </body>
 
 </html>

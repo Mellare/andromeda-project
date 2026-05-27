@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,42 +12,45 @@
     <title>Astronomy Picture Of Day</title>
 
     <style>
-        body{
+        body {
             background-image: url("{{url_for('static', filename='images/cosmic-bg.png')}}");
         }
     </style>
-    
+
 </head>
 
 <body>
 
-<header>
-    <div class="container-title">
-        <h1 id="title-caption">Astronomy Picture Of Day</h1>
-        <button id="btn-home" type="button" class="btn btn-outline-primary" onclick=window.location.href="{{url_for('index')}}">Home</button>
-    </div>
-</header>
+    <header>
+        <div class="container-title">
+            <h1 id="title-caption">Astronomy Picture Of Day</h1>
+            <button id="btn-home" type="button" class="btn btn-outline-primary"
+                onclick=window.location.href="{{url_for('index')}}">Home</button>
+        </div>
+    </header>
 
-<main>
-        <h2>A API APOD retorna uma imagem diretamente da NASA a cada dia e com uma descrição detalhada feita por um astrônomo!</h2>
-    <div class="container-img">
-        {% if media_type == "video" %}
-        <video width="100%" height="400" controls>
-            <source src="{{url}}">
-        </video>
-        {% else %}
-        <img id="img-apod" src="{{url}}">
-        {% endif %}
-    </div>
-    <br>
-    <br>
-    <div class="container-explanation">
-        <h2>Para saber mais:</h2>
-        <br>
-        <p>{{description}}</p>
-    </div>
-</main>
-<script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+    <main>
+        <h2>A API APOD retorna uma imagem diretamente da NASA a cada dia e com uma descrição detalhada feita por um
+            astrônomo!</h2>
+        <div class="container-img">
+            {% if media_type == "video" %}
+            <video width="100%" height="400" controls>
+                <source src="{{url}}">
+            </video>
+            {% else %}
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Para saber mais! &#128270;</h5>
+                    <p class="card-text">{{description}}</p>
+                </div>
+                <img src="{{url}}" class="card-img-bottom" alt="...">
+            </div>
+            {% endif %}
+        </div>
+    </main>
+
+    <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
 
 </body>
 
