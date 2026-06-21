@@ -2,6 +2,7 @@ body{
     font-family: 'Sora', monospace;
     background-repeat: no-repeat;
     background-size: cover;
+    color: white;
 }
 
 .container-title{
@@ -24,6 +25,10 @@ body{
 h1, h2{
     color: white;
     font-weight: bold;
+}
+
+.font-color-white{
+    color: white;
 }
 
 .container-img{

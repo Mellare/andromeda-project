@@ -25,13 +25,14 @@
         <div class="container-title">
             <h1 id="title-caption">Astronomy Picture Of Day</h1>
             <button id="btn-home" type="button" class="btn btn-outline-primary"
-                onclick=window.location.href="{{url_for('index')}}">Home</button>
+                onclick=window.location.href="{{url_for('index')}}">Voltar</button>
         </div>
     </header>
 
     <main>
         <h2>A API APOD retorna uma imagem diretamente da NASA a cada dia e com uma descrição detalhada feita por um
             astrônomo!</h2>
+        <p class="font-color-white">Dica: Clique com o botão direito do mouse e vá na opção "Abrir imagem em uma nova guia" para visualizar apenas a imagem de forma nítida.</p>
         <div class="container-img">
             {% if media_type == "video" %}
             <video width="100%" height="400" controls>
