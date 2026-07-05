@@ -58,15 +58,18 @@ def asteroids():
     formated_data = data_neoWs.json()
     object_count = formated_data['element_count']
     object_data = formated_data['near_earth_objects'][f"{datetime.date.today()}"]
-    list_names = []
-    list_diameter = []
-    list_approach_date_full = []
+    names = []
+    diameters = []
+    approach_date_full = []
+    kilometers_per_second = []
+    is_hazardous = []
     for i in object_data:
-        list_names.append(i['name'])
-        list_diameter.append(i['estimated_diameter']['meters']['estimated_diameter_max'])
-    for j in object_data:
-        list_approach_date_full.append(j['close_approach_data'][0]['close_approach_date_full'])
-    all_data = list(zip(list_names, list_diameter, list_approach_date_full))
+        names.append(i['name'])
+        diameters.append(i['estimated_diameter']['meters']['estimated_diameter_max'])
+        approach_date_full.append(i['close_approach_data'][0]['close_approach_date_full'])
+        kilometers_per_second.append(i['close_approach_data'][0]['relative_velocity']['kilometers_per_second'])
+        is_hazardous.append(i['is_potentially_hazardous_asteroid'])
+    all_data = list(zip(names, diameters, approach_date_full, kilometers_per_second, is_hazardous))
     return render_template("asteroids.html", count = object_count, data = all_data)
 
 
