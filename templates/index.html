@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
-    <title>Andromeda Project</title>
+    <title>Home</title>
 
     <style>
         body {
@@ -23,7 +23,7 @@
 
     <header>
         <div class="container-title">
-            <h1>Bem-vindo ao Andromeda Project</h1>
+            <h1>Andromeda Project</h1>
         </div>
         <nav class="navbar navbar-expand-lg bg-body">
             <div class="container-fluid">
@@ -55,11 +55,11 @@
     </header>
 
     <main>
-        <h2>Veja a fase da lua hoje &#127772;</h2>
+        <h2>Veja a fase da lua hoje 🌜</h2>
         <div class="card" style="width: 40rem;">
             <img src="{{svg_moon}}" class="card-img-top" alt="...">
             <div class="card-body">
-                <p class="card-text">Exibindo a fase da lua na latitude: -23.5489 e longitude: -46.6388</p>
+                <p class="card-text">Exibindo a fase da lua na latitude: -23.5489 e longitude: -46.6388 através da Astronomy API.</p>
             </div>
         </div>
     </main>
@@ -68,15 +68,12 @@
         <div class="row-icons">
             <img class="tech-icons" src="{{url_for('static', filename='images/github.svg')}}">
             <p>Desenvolvido por:</p>
-            <a class="nav-link active" href="https://github.com/Mellare">Mellare</a>
+            <a class="nav-link active" href="https://github.com/Mellare">Repositório do Github</a>
         </div>
         <div class="row-icons">
-            <img class="tech-icons" src="{{url_for('static', filename='images/html5.svg')}}">
-            <img class="tech-icons" src="{{url_for('static', filename='images/css.svg')}}">
-            <img class="tech-icons" src="{{url_for('static', filename='images/bootstrap.svg')}}">
-            <img class="tech-icons" src="{{url_for('static', filename='images/javascript.svg')}}">
-            <img class="tech-icons" src="{{url_for('static', filename='images/python.svg')}}">
-            <img class="tech-icons" src="{{url_for('static', filename='images/flask.svg')}}">
+            <img class="tech-icons" src="{{url_for('static', filename='images/linkedin.svg')}}">
+            <p>Linkedin:</p>
+            <a class="nav-link active" href="https://www.linkedin.com/in/pedro-luis-milare/">Pedro Luís Milaré</a>
         </div>
         <p>*Os logotipos de tecnologias são marcas registradas de seus respectivos proprietários.</p>
     </footer>

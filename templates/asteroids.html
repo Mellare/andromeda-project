@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/asteroids.css')}}">
-    <title>Space Map</title>
+    <title>Space Statistics</title>
 
     <style>
         body {
@@ -21,31 +21,35 @@
 
     <header>
         <div class="container-title">
-            <h1>Mapeamento de objetos espaciais</h1>
+            <h1>Mapeamento de objetos espaciais 🌠</h1>
             <button id="btn-home" type="button" class="btn btn-outline-primary"
                 onclick=window.location.href="{{url_for('index')}}">Voltar</button>
         </div>
     </header>
 
     <main>
-        <h2>A API que monitora os objetos espaciais é a Asteroids NeoWS, a cada dia os dados são atualizados com
-            informações de objetos passando próximos da Terra &#127776;</h2>
+        <h3 class="font-color-white">Veja abaixo a tabela de estatísticas de asteróides passando por nosso planeta diariamente.</h3>
         <div class="container-data">
             <table>
                 <tr>
                     <th>Nome</th>
                     <th>Diâmetro</th>
                     <th>Data de passagem</th>
+                    <th>KM/s</th>
+                    <th>Perigoso</th>
                 </tr>
-                {% for name, diameter, approach_date in data %}
+                {% for name, diameter, approach_date, kilometers_second, hazardous in data %}
                 <tr>
                     <td>{{name}}</td>
                     <td>{{diameter}}</td>
                     <td>{{approach_date}}</td>
+                    <td>{{kilometers_second}}</td>
+                    <td>{{hazardous}}</td>
                 </tr>
                 {% endfor %}
             </table>
         </div>
+        <p class="font-color-white">*Os dados são atualizados diariamente através da API Asteroids NeoWs da NASA.</p>
     </main>
 
 </body>
