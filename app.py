@@ -14,7 +14,7 @@ application_id = os.getenv('APPLICATION_ID')
 application_secret = os.getenv('APPLICATION_SECRET')    
 
 
-@app.route("/index", methods=['GET', 'POST'])
+@app.route("/index", methods=['GET'])
 def index():
     url_moon_phase = "https://api.astronomyapi.com/api/v2/studio/moon-phase"
     moon_params = {

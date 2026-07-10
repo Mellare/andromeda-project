@@ -1,13 +1,13 @@
 # Andromeda Project 🚀
 
-> O Andromeda Project é uma aplicação que traz dados espaciais em tempo real através das API'S da NASA e Astronomy API.
+> O Andromeda Project é uma aplicação que traz dados espaciais em tempo real através das APIs da NASA e Astronomy API.
 
 ---
 
 ## Funcionalidades 🧰
 
 - Imagens espaciais da NASA.
-- Dados de asteróides próximos da Terra.
+- Dados de asteroides próximos da Terra.
 - Exibição da fase da lua.
 
 ---
